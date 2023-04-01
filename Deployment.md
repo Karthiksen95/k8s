@@ -1,4 +1,4 @@
-# k8s
+# k8s deployment
 ## Task 1: Write a Deployment yaml and Apply it
 
 1. Create a `dep-nginx.yaml` using the content given below:
