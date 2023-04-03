@@ -1,7 +1,7 @@
-Lab 2: Taking backup of an etcd using snapshot and restore. 
+## Lab : Taking backup of an etcd using snapshot and restore. 
 
 This lab demonstrates the backup process for etcd data store.
-Task 1: Creating Deployments in your cluster
+### Task 1: Creating Deployments in your cluster
 1. Check the versions of kubadm, kubectl and kubelet in the cluster by using following commands, make a count of worker and master nodes.
 ```
 kubeadm version
@@ -26,7 +26,7 @@ kubectl get svc
 ```
 kubectl get pods -o wide
 ```
-Task 2: Backup the cluster configuration by taking a snapshot of etcd
+### Task 2: Backup the cluster configuration by taking a snapshot of etcd
 You can take the back of Kubernetes cluster by taking the point in time snapshot of etcd key value store, we will use etcdctl utility for back up in this example.
 
 1. As etcd is running as a static pod in this kubeadm cluster, find out which version of etcd container image is used in the manifest file. You can describe the pod or view the yaml itself. Image will be k8s.gcr.io/etcd:3.4.13-0
@@ -93,7 +93,7 @@ sudo mv /etc/kubernetes/manifests/etcd.yaml /etc/kubernetes/manifests/etcd.yaml.
 ```
 sudo mv /etc/kubernetes/manifests/kube-apiserver.yaml /etc/kubernetes/manifests/kube-apiserver.yaml.bak
 ```
-Task 3: Restore the cluster configuration 
+### Task 3: Restore the cluster configuration 
 1. Restore etcd as given below. Create an etcd data directory at /var/lib/etcd. Use 
 etcdctl snapshot restore command in a temporary docker container on the snapshot. List the data directory to verify whether the backup was successful. 
 ```
