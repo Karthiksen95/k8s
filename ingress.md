@@ -4,6 +4,15 @@
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.1.1/deploy/static/provider/cloud/deploy.yaml
 ```
 This command will create a namespace named ingress-nginx, deploy the necessary resources, and configure the NGINX Ingress Controller.
+Verify the NGINX Ingress Controller is running:
+```
+kubectl get pods -n ingress-nginx --watch
+```
+Wait for the ingress-nginx-controller pod to have the status Running. Press Ctrl+C to exit the watch mode.
+
+Now, the NGINX Ingress Controller is installed and running in your Kubernetes cluster.
+
+To expose the Ingress Controller externally, you can create a NodePort or LoadBalancer service.
 ### Deploy Sample Applications with NodePort Services
 Create a file named ```sample-apps-nodeport.yaml``` with the following content:
 ```
