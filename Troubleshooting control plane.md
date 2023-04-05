@@ -1,4 +1,4 @@
-Lab 5:  Troubleshooting control plane failure 
+## Lab 5:  Troubleshooting control plane failure 
 Execute the below script to simulate control plane failure
 ```
 cat <<EOF | sudo tee /home/ubuntu/script
