@@ -78,9 +78,8 @@ Exit the shell.
 The security settings that we specify for a container apply only to the container, and they override settings made at the Pod level when there is overlap. Containers setting do not affect the pod’s volumes.
 
 1. Create file sc-ctr.yml to apply security context on container level.
-```
-vi sc-ctr.yml
-``` 
+
+```vi sc-ctr.yml```
 ```
 apiVersion: v1
 kind: Pod
