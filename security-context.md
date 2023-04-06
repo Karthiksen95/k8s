@@ -81,7 +81,6 @@ The security settings that we specify for a container apply only to the containe
 ```
 vi sc-ctr.yml
 ``` 
-
 ```
 apiVersion: v1
 kind: Pod
